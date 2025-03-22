@@ -1,0 +1,70 @@
+/*1*/
+header {
+    background-color: blue;
+}
+
+header * {
+    color: white;
+}
+
+/*2*/
+nav {
+    background-color: lightgrey;
+}
+
+nav span:after {
+    content: " - ";
+}
+
+nav span:last-of-type::after{
+    content: "";
+}
+
+/*3*/
+p span.master {
+    color: blue;
+    font-weight: bold;
+}
+
+p span.master + em {
+    color: red;
+    font-weight: bold;
+    text-decoration: none !important;
+}
+
+p em {
+    color: green;
+    text-decoration: underline;
+}
+
+/*4*/
+a[target="_blank"]::before{
+    content: " ➡️ ";
+}
+
+/*5*/
+a[href^="https"]::after{
+    content: "(ext.)";
+}
+
+/*6*/
+ul.italist li:nth-child(3n+1){
+    color: green;
+}
+
+ul.italist li:nth-child(3n+2){
+    color: white;
+}
+
+ul.italist li:nth-child(3n+3){
+    color: red;
+}
+
+/*7*/
+table#chess tr:nth-child(odd) td:nth-child(odd) {
+    background-color: black !important;
+}
+
+table#chess tr:nth-child(even) td:nth-child(even) {
+    background-color: black !important;
+}

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>User input collector</title>
+    </head>
+    <body>
+        <header>
+            <h1>Sign up</h1>
+        </header>
+        <main>
+            <article>
+                <form method="post">
+                    <section>
+                        <fieldset>
+                            <legend>Personal data</legend><br>
+                            <label for="firstname">First name:</label>
+                            <input type="text" id="firstname" name="firstName"><br><br>
+
+                            <label for="lastname">Last name:</label>
+                            <input type="text" id="lastname" name="lastName"><br><br>
+
+                            <label for="birthday">Birthday:</label>
+                            <input type="date" id="birthday" name="birthDay">
+
+                            <p>Gender:</p>
+                            <input type="radio" id="genderMale" name="gender" value="male">
+                            <label for="genderMale">Male</label><br>
+
+                            <input type="radio" id="genderFemale" name="gender" value="female">
+                            <label for="genderFemale">Female</label><br>
+
+                            <input type="radio" id="genderOther" name="gender" value="other">
+                            <label for="genderOther">Other</label><br>
+
+                            <input type="radio" id="genderUnspecified" name="gender" value="unspecified">
+                            <label for="genderUnspecified">Do not declare</label>
+                        </fieldset>
+                    </section>
+                    <br>
+                    <section>
+                        <fieldset>
+                            <legend>Preferences</legend><br>
+                            <label for="password">Password:</label>
+                            <input type="password" id="password" name="password"><br><br>
+
+                            <label for="biography">Biography:</label><br><br>
+                            <textarea id="biography" name="biography"></textarea><br><br>
+
+                            <label for="color">Preferred color:</label>
+                            <input type="color" id="color" name="color">
+                        </fieldset>
+                    </section>
+                    <br>
+                    <input type="submit">
+                </form>
+            </article>
+        </main>
+    </body>
+</html>
