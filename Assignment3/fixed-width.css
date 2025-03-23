@@ -1,0 +1,54 @@
+body {
+    margin: 0px;
+}
+
+header {
+    width: 100%;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    background: lightgray;
+}
+
+nav {
+    width: 100%;
+    padding-top: 18px;
+    padding-bottom: 18px;
+    background: lightblue;
+}
+
+main > div.container {
+    position: relative;
+}
+
+nav div a ~ a{
+    margin: 8px;
+}
+
+main section {
+    display: inline-block;
+    width: 60%;
+}
+
+main aside {
+    display: inline-block;
+    position: absolute;
+    width: 30%;
+    margin-top: 25px;
+    left: 700px;
+}
+
+img {
+    width: 200px;
+    height: 200px;
+}
+
+footer {
+    background: rgb(20, 24, 71);
+    padding: 30px;
+    color: white;
+}
+
+footer a {
+    color: gold;
+}
+

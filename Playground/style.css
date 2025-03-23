@@ -1,12 +1,1 @@
-p::first-letter {
-    color: red;
-    font-size: larger;
-}
-
-p::first-line {
-    color:aqua;
-}
-
-p:last-child::selection {
-    color:blue;
-}
+body 
