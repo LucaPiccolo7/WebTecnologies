@@ -1,0 +1,61 @@
+body {
+    display: grid;
+    grid-template-columns: 60vw 1fr;
+    grid-template-rows: auto auto 1fr auto;
+    grid-template-areas: 
+    "header header"
+    "navbar navbar"
+    "main aside"
+    "footer footer";
+    gap: 0px;
+    margin: 0%;
+}
+
+header {
+    grid-area: header;
+    padding-left: 1%;
+    background: lightgray;
+}
+
+nav {
+    grid-area: navbar;
+    position: sticky;
+    top: 0px;
+    padding-top: 0.8%;
+    padding-bottom: 0.8%;
+    padding-left: 1%;
+    background: lightblue;
+}
+
+main {
+    grid-area: main;
+    padding-left: 1%;
+}
+
+aside {
+    grid-area: aside;
+    padding-left: 15%;
+}
+
+aside img {
+    padding-top: 2%;
+    width: 40%;
+}
+
+aside img ~ * {
+    width: 60%;
+}
+
+footer {
+    grid-area: footer;
+    display: flex;
+    justify-content: flex-start;
+    flex-shrink: 1;
+    background: rgb(20, 24, 71);
+    padding: 1.5%;
+    color: white;
+}
+
+footer a {
+    color: gold;
+}
