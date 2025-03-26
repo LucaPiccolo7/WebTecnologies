@@ -9,10 +9,18 @@ console.log(studentName);
 console.log(age);
 console.log(isEnrolled);
 function studentInfo(studentName, age, isEnrolled, course="Web Tecnologies"){
-    if (isEnrolled)
-        console.log(`${studentName} (${age}) is enrolled in the ${course} course`);
-    else
-        console.log(`${studentName} (${age}) is NOT enrolled in the ${course} course`);
+
+    if (
+        (typeof studentName === "string") && 
+        (typeof age === "number") && 
+        (typeof isEnrolled === "boolean") && 
+        (typeof course === "string")
+    ){
+        if (isEnrolled)
+            console.log(`${studentName} (${age}) is enrolled in the ${course} course`);
+        else
+            console.log(`${studentName} (${age}) is NOT enrolled in the ${course} course`);
+    }
 }
 studentInfo(studentName, age);
 studentInfo(studentName, age, isEnrolled, "INGSW");
@@ -44,3 +52,71 @@ function describe(){
 }
 
 movie.describe();
+
+function Director(firstName, lastName, birthYear, deathYear=undefined){
+    this.firstName = firstName;
+    this.lastName = lastName;
+    this.birthYear = birthYear;
+    this.deathYear = deathYear;
+    this.describe = describe;
+}
+
+function Movie(title, director, year, is_part_of_a_saga=false){
+    this.title = title;
+    this.director = director;
+    this.year = year;
+    this["is_part_of_a_saga"] = is_part_of_a_saga;
+    this.describe = describe;
+}
+
+let director = new Director("Denis", "Villeneuve", "03/08/1967");
+movie = new Movie("Dune", director, 2021, true);
+director.describe();
+movie.describe();
+
+delete movie["is part of a saga"];
+
+//Domanda: e' possibile controllare che movie1, movie2 e movie3 siano di tipo "Movie"?
+function Trilogy(title, movie1, movie2, movie3) {
+
+    if (
+        (typeof title === "string") &&
+        (typeof movie1 === "object") &&
+        (typeof movie2 === "object") &&
+        (typeof movie3 === "object")
+    ){
+        this.title = title;
+        this.movie1 = movie1;
+        this.movie2 = movie2;
+        this.movie3 = movie3;
+    }
+}
+
+/*3*/
+function collatz(num){
+
+    let acc = num;
+    let steps = 0;
+
+    while(acc !== 1){
+        steps++;
+        acc = calculateResult(acc);
+    }
+
+    console.log(`Collatz proven for n=${num}: sequence converges to 1 in ${steps}.`);
+
+    function calculateResult(acc){
+     
+        let result;
+    
+        if (acc % 2 === 0)
+            result = acc/2;
+        else
+            result = 3*acc + 1;
+    
+        return result;
+    }
+    
+}
+
+collatz(2);
