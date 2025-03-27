@@ -10,14 +10,16 @@ div.container {
 header {
     padding-top: 1%;
     padding-bottom: 1%;
-    background: lightgray;
+    background: gainsboro;
 }
 
 nav {
     position: sticky;
+    top: 0;
     padding-top: 0.8%;
     padding-bottom: 0.8%;
-    background: lightblue;
+    background-color: lightblue;
+    opacity: 1;
 }
 
 nav a ~ a{
